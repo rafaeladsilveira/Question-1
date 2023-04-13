@@ -14,5 +14,5 @@ code abstraction.
 The problem solution was developed using Arduino framework and can be tested and validade using 
 an online tool like Tinkercad: https://www.tinkercad.com/
 
-The circuit used to test and validate the solution is an Arduino Uno R3 and a button.
+The circuit used to test and validate the solution is an Arduino Uno R3 and a button as showed in the file "Circuit".
 To test, copy and execute the code contents of the file "Program Q1". 
