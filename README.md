@@ -11,8 +11,8 @@ share this code through a public repository on GitHub. Low-level methods can be 
 you prefer, use frameworks like Arduino, ESP32 or even other market platforms in this low-level 
 code abstraction.
 
-The problem solution was developed using Arduino framework and can tested and validade using 
+The problem solution was developed using Arduino framework and can be tested and validade using 
 an online tool like Tinkercad: https://www.tinkercad.com/
 
-The circuit used to test and validate the soltuion is an Arduino Uno R3 and a button.
-To test, copy and execute the contents of the file "Program Q1". 
+The circuit used to test and validate the solution is an Arduino Uno R3 and a button.
+To test, copy and execute the code contents of the file "Program Q1". 
