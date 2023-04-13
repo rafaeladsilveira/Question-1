@@ -1,0 +1,61 @@
+#define buttonPin 2
+
+// declare the variables  
+int ButtonState = 0; 	// current state of the button
+int stateON = 0;     	// state ON 
+int stateOFF = 1; 	 	// state OFF, button not pressed is the starting condition
+int statePROTECTED = 0; // state PROTECTED 
+
+void setup()
+{
+  // initialize the button pin as an input for this situation
+  pinMode(buttonPin, INPUT);
+  // initialize serial communication for printing the checking stages on the monitor
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  // read the state of the button
+  ButtonState = digitalRead(buttonPin);
+  
+  // the button starts released (state OFF=1).
+  // check if button is pressed.  If it is, the buttonState is HIGH
+  // and the stateOFF = 1 considering the initial condition
+  if (stateOFF = 1 && ButtonState == HIGH) {
+    // when button is pressed, OFF state changes to ON
+    stateOFF = 0;
+    stateON = 1;
+    // print ON
+    Serial.println("State ON");
+    // determine the time for how long the button is kept pressed in miliseconds
+    unsigned long timepressed = millis();
+    // print the time
+    Serial.println("Timepressed (ms):"); 
+    Serial.println(timepressed);
+    Serial.println(); 
+  } 
+  // intermediate state between the transition from the ON to the OFF
+  // check if the button is released. If it is, the buttonState is LOW
+  if (stateON == 1 && ButtonState == LOW){
+    // state ON changes to PROTECTED
+    stateON = 0;
+    statePROTECTED = 1;
+    // print PROTECTED
+    Serial.println("State PROTECTED");
+    // the state remains protected for 10 seconds
+    delay(10000);
+    // the state change to OFF
+    stateOFF = 1;
+  }
+  // check if the state is OFF and button is released.
+  else if(stateOFF = 1 && ButtonState == LOW){
+    // state PROTECTED changes
+    statePROTECTED = 0;
+    stateON = 0;
+    // print OFF
+    Serial.println("State OFF");
+  }
+  
+}
+  
