@@ -1,3 +1,4 @@
+// define the port that the button is connected
 #define buttonPin 2
 
 // declare the variables  
